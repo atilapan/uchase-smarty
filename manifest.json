@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Ucha.se Smarty [v1.3]",
+  "version": "1.3",
+  "background": {
+    "service_worker": "js/backgroundWorker.js"
+  },
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "scripting"
+  ],
+  "host_permissions": [
+    "*://*.ucha.se/*"
+  ],
+  "icons": {
+    "16": "images/logo-16.png",
+    "36": "images/logo-36.png",
+    "48": "images/logo-48.png",
+    "144": "images/logo-144.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.ucha.se/*"],
+      "js": ["js/main.js"]
+    }
+  ]
+}
